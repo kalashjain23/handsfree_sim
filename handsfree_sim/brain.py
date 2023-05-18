@@ -39,20 +39,25 @@ def movement(image):
             pinky_tip = hand_landmark.landmark[mp_hands.HandLandmark.PINKY_TIP]
             pinky_pip = hand_landmark.landmark[mp_hands.HandLandmark.PINKY_PIP]
             
-            """ Condition for all the fingers to be straight """
+            """ Condition for an open hand """
             if thumb_tip.y < thumb_mcp.y and index_tip.y < index_pip.y and middle_tip.y < middle_pip.y and ring_tip.y < ring_pip.y and pinky_tip.y < pinky_pip.y:
                 
-                if index_tip.x < index_pip.x: return 'l' # (Turtle turns left)
+                if index_tip.x < index_pip.x: return 'left' # Hand is tilted to the left, turtle turns left
                 
-                else: return 'r' # (Turtle turns right)
+                else: return 'right' # Hand is tilted to the right, turtle turns right
+                
+            elif index_tip.y < index_pip.y and middle_tip.y < middle_pip.y and ring_tip.y > ring_pip.y and pinky_tip.y > pinky_pip.y:
+                
+                """ Condition for 'V' sign (turtle moves straight) """
+                return 'straight'
             
             elif index_tip.y < index_pip.y and middle_tip.y > middle_pip.y and ring_tip.y > ring_pip.y and pinky_tip.y > pinky_pip.y:
                 
-                """ Condition for only the index finger to be straight """
-                if index_tip.x < index_pip.x: return 'ls' # (Turtle goes left on its spot)
+                """ Condition for pointing up (turtle moves on its spot) """
+                if index_tip.x < index_pip.x: return 'sleft' # (Turtle turns left)
                 
-                else: return 'rs' # (Turtle goes right on its spot)          
+                else: return 'sright' # (Turtle turns right)          
             
             else:
                 """ Condition for a fist (turtle stops) """
-                return 'n'
+                return 'stop'

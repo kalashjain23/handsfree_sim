@@ -28,19 +28,22 @@ class Controller(Node):
         
         if success:      
             match movement(image):
-                case "l":
+                case "left":
                     self.velocity_.linear.x = 1.5
-                    self.velocity_.angular.z = 0.75
-                case 'ls':
+                    self.velocity_.angular.z = 1.5
+                case 'sleft':
                     self.velocity_.linear.x = 0.0
-                    self.velocity_.angular.z = 0.75
-                case 'r':
+                    self.velocity_.angular.z = 1.5
+                case 'right':
                     self.velocity_.linear.x = 1.5
-                    self.velocity_.angular.z = -0.75
-                case 'rs':
+                    self.velocity_.angular.z = -1.5
+                case 'sright':
                     self.velocity_.linear.x = 0.0
-                    self.velocity_.angular.z = -0.75
-                case 'n':
+                    self.velocity_.angular.z = -1.5
+                case 'straight':
+                    self.velocity_.linear.x = 1.5
+                    self.velocity_.angular.z = 0.0
+                case 'stop':
                     self.velocity_.linear.x = 0.0
                     self.velocity_.angular.z = 0.0
                 

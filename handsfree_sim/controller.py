@@ -48,6 +48,7 @@ class Controller(Node):
                     self.velocity_.angular.z = 0.0
                 
             self.controller_.publish(self.velocity_)
+            image = cv.flip(image, 1)
             self.image_publisher_.publish(self.br.cv2_to_imgmsg(image))
             
     def show_image(self, data):

@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'controller_node = handsfree_sim.controller:main'
+            'controller = handsfree_sim.controller:main'
         ],
     },
 )

@@ -21,7 +21,7 @@ class Controller(Node):
         self.image_subscriber_ = self.create_subscription(Image, "frames", self.show_image, 10)
         
         self.velocity_ = Twist()
-        self.br = CvBridge()
+        self.bridge_ = CvBridge()
         
     def timer_callback(self):
         success, image = self.cap_.read()
@@ -49,10 +49,10 @@ class Controller(Node):
                 
             self.controller_.publish(self.velocity_)
             image = cv.flip(image, 1)
-            self.image_publisher_.publish(self.br.cv2_to_imgmsg(image))
+            self.image_publisher_.publish(self.bridge_.cv2_to_imgmsg(image))
             
     def show_image(self, data):
-        frame = self.br.imgmsg_to_cv2(data)
+        frame = self.bridge_.imgmsg_to_cv2(data)
         cv.imshow('Controller', frame)
         cv.waitKey(1)
         

@@ -3,7 +3,9 @@
 ## **Idea**
 Control the turtle in the turtlesim just by your hand gestures!
 
-### <u>__Available gestures:__ </u> 
+####
+
+ **Available gestures**: 
 Victory Sign (✌️) --> Go straight  
 Pointing finger (☝️) ( left tilted ) --> Turn left on its spot  
 Pointing finger (☝️) ( right tilted ) --> Turn right on its spot  
@@ -39,3 +41,4 @@ ros2 launch handsfree_sim main.launch.py
 ```  
 *Now you can control turtles in the turtlesim just by your hand gestures :D*
 
+https://github.com/kalashjain23/handsfree_sim/assets/97672680/087287e8-2538-4ddc-a57e-bf14682f3f57

@@ -10,8 +10,8 @@ Pointing finger (☝️) ( right tilted ) --> Turn right on its spot
 Raised Hand (✋) ( left tilted ) --> Turn left and go straight as well  
 Raised Hand (✋) ( right tilted ) --> Turn right and go straight as well  
 Fist (✊) --> Stop  
-    
 
+*Note: 5 seconds of inactivity/no gesture will automatically stop the program.*  
 *This package has been created and tested on Ubuntu 22.04 with ROS2 Humble.*
 
 ## **How to build**

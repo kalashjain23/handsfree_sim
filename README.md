@@ -3,9 +3,7 @@
 ## **Idea**
 Control the turtle in the turtlesim just by your hand gestures!
 
-####
-
- **Available gestures**: 
+#### **Available gestures**: 
 Victory Sign (✌️) --> Go straight  
 Pointing finger (☝️) ( left tilted ) --> Turn left on its spot  
 Pointing finger (☝️) ( right tilted ) --> Turn right on its spot  
